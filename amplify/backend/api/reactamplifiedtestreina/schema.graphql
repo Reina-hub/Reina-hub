@@ -1,0 +1,6 @@
+type Leak @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  lon: String
+  lat: String
+}
+ 
