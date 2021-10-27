@@ -1,0 +1,20 @@
+version: 1
+backend:
+  phases:
+    build:
+      commands:
+        - amplifyPush --simple    
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    files:
+        - dist
+        - dist
+    discard-paths: yes
+    baseDirectory: dist  
